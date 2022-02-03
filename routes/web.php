@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('admin.master');
 });
 
-Route::get('/list', [UserController::class, 'list'])->name('list.user');
+Route::get('/list', [UserController::class, 'list'])->name('user.list');
