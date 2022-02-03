@@ -34,22 +34,24 @@
                     <td>{{ $user->name }}</td>
                     <td><img src="{{url('/uploads/' .$user->image) }}" width="80"></td>
                     <td>{{ $user->date }}</td>
-                    {{-- <td><a href="{{ route('product.edit', $product->id) }}"><button
+                    <td><a href="{{route('user.view', $user->id)}}"><button
+                        class="btn btn-success">View</button></a></td>
+                    <td><a href="{{ route('user.edit', $user->id) }}"><button
                         class="btn btn-primary">Edit</button></a></td>
             <td><button class="btn btn-danger" data-toggle="modal"
-                    data-target="#exampleModal{{ $product->id }}">Delete</button>
+                    data-target="#exampleModal{{ $user->id }}">Delete</button>
             </td>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal{{ $product->id }}" tabindex="-1"
+            <div class="modal fade" id="exampleModal{{ $user->id }}" tabindex="-1"
                 aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <form action="{{ route('product.delete', $product->id) }}" method="post">
+                <form action="{{ route('user.delete', $user->id) }}" method="post">
                     @csrf
                     @method('DELETE')
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title"
-                                    id="exampleModalLabel{{ $product->id }}">Delete
+                                    id="exampleModalLabel{{ $user->id }}">Delete
                                     confiramation
                                 </h5>
                                 <button type="button" class="close"
@@ -69,7 +71,7 @@
                         </div>
                     </div>
                 </form>
-            </div> --}}
+            </div>
             </tr>
             @endforeach
         </tbody>
