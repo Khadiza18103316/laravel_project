@@ -27,12 +27,12 @@ class UserController extends Controller
         //dd('ok');  
          //User validation
             
-        //  $request->validate([
-        //     'name'=>'required',
-        //     'description'=>'required',
-        //  ]);
+         $request->validate([
+            'name'=>'required',
+            'date'=>'required',
+         ]);
 
-         //dd($request->all());
+        //  dd($request->all());
          User::create([
             'name'=>$request->name,
             'date'=>$request->date,
