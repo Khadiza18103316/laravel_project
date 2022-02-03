@@ -11,7 +11,7 @@
     <p class="alert alert-success">{{session()->get('success')}}</p>
 @endif
 
-    <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a>
+    <a href="{{route('user.create')}}" class="btn btn-primary"><i class="fa fa-plus"></i> Add</a>
     <br>
     <br>
     <table class="table table-striped table-bordered table-hover">
