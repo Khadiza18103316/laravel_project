@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function list(){
-        $users =User:: all();
-        return view('admin.pages.list',compact('users'));
+        $users = User::paginate(5);
+         return view('admin.pages.list',compact('users'));
     }
 
     public function create(){
