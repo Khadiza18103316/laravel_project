@@ -28,16 +28,13 @@
             </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($products as $key => $product)
+            @foreach ($users as $key => $user)
                 <tr>
                     <th>{{ $key + 1 }}</th>
-                    <td>{{ $product->name }}</td>
-                    <td><img src="{{url('/uploads/' .$product->image) }}" width="80"></td>
-                    <td>{{ $product->price }}</td>
-                    <td>{{ $product->description }}</td>
-                    <td>{{ $product->category->name }}</td>                    
-                    <td>{{ $product->brand->name }}</td>
-                    <td><a href="{{ route('product.edit', $product->id) }}"><button
+                    <td>{{ $user->name }}</td>
+                    <td><img src="{{url('/uploads/' .$user->image) }}" width="80"></td>
+                    <td>{{ $user->date }}</td>
+                    {{-- <td><a href="{{ route('product.edit', $product->id) }}"><button
                         class="btn btn-primary">Edit</button></a></td>
             <td><button class="btn btn-danger" data-toggle="modal"
                     data-target="#exampleModal{{ $product->id }}">Delete</button>
@@ -72,9 +69,9 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> --}}
             </tr>
-            @endforeach --}}
+            @endforeach
         </tbody>
     </table>
 @endsection
